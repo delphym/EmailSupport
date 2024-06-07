@@ -57,7 +57,7 @@ password = your_password
 imap_server = imap.example.com
 imap_port = 993
 ```
-Don't use any quotes to suround the values in `config.ini`.
+Don't use any quotes to surround the values in `config.ini`.
 
 ### Step 6: Run the Script
 Run the script to process the emails and generate the Excel report.
@@ -69,12 +69,21 @@ python email_analysis.py
 ### Step 7: Check the Output
 The script will generate an email_analysis.xlsx file in the same directory. This file contains the total email counts and individual folder counts, along with a chart showing the number of emails received per day.
 
+### Step 8: Deactivate the virtual environment
+This is optional step   to deactivate the virtual environment, after finishing the work with the script.
+Just type in the console from where you ran the script following command:
+`deactivate`
+
 ## Dependencies
 * `imaplib2`: For connecting to the IMAP email server.
 * `pandas`: For data manipulation and analysis.
 * `matplotlib`: For plotting charts.
 * `openpyxl`: For creating and modifying Excel files.
 * `configparser`: For reading configuration files.
+
+These dependency libraries can be installed by:
+`pip install imaplib2 pandas matplotlib openpyxl configparser`
+
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
