@@ -132,7 +132,8 @@ for folder in folders_to_search:
 
         for index, email_id in enumerate(email_ids):
             try:
-                res, msg_data = mail.fetch(email_id, "(RFC822)")  # Fetch the email
+                # Use BODY.PEEK to fetch the email without marking it as read
+                res, msg_data = mail.fetch(email_id, "(BODY.PEEK[])")
                 for response_part in msg_data:
                     if isinstance(response_part, tuple):
                         msg = email.message_from_bytes(response_part[1])
