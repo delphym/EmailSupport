@@ -38,6 +38,7 @@ include_subjects = [
 
 exclude_subjects = [
     'JIRA'
+    ,'Undelivered Mail Returned to Sender'
 ]
 
 # Define the folders to search
